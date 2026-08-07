@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+    line-height: 1.5;
+    padding: 20px;
+}
+
+.app {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.divider {
+    margin: 10px;
+    border: none;
+    border-top: 4px solid #000000;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.card h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+}
+
+.card h2 {
+    font-size: 20px;
+    margin: 16px 0 8px;
+    color: #333;
+}
+
+.card p {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+    color: #171717;
+}
+
+.gallery {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 200px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.review {
+    background: #f9f9f9;
+    border-left: 3px solid #4a90d9;
+    padding: 10px 14px;
+    margin-top: 10px;
+    font-style: italic;
+    border-radius: 0 6px 6px 0;
+}
