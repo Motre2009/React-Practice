@@ -1,0 +1,68 @@
+.pizza-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.pizza-display {
+    width: 100%;
+    max-width: 320px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    background: var(--bg);
+    text-align: left;
+}
+
+.pizza-display h3 {
+    margin: 0 0 12px;
+    font-size: 20px;
+}
+
+.pizza-ingredients {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.pizza-ingredients li {
+    background: var(--accent-bg);
+    color: var(--accent);
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 13px;
+}
+
+.pizza-price {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-h);
+    margin: 0;
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+}
+
+.pizza-controls {
+    display: flex;
+    gap: 12px;
+}
+
+.pizza-controls button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background: var(--accent);
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.pizza-controls button:hover {
+    opacity: 0.85;
+}
