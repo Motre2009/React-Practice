@@ -1,0 +1,174 @@
+:root {
+    --level1-accent: #0e9488;
+    --level2-accent: #b6790a;
+    --level3-accent: #6d4fc2;
+
+    --lab-radius: 8px;
+}
+
+.lab-title {
+    margin-bottom: 8px;
+}
+
+.lab-level-section {
+    margin: 40px 0;
+    text-align: left;
+}
+
+.lab-level-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lab-level-heading::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.lab-level-section[data-level='1'] .lab-level-heading::before {
+    background: var(--level1-accent);
+}
+.lab-level-section[data-level='2'] .lab-level-heading::before {
+    background: var(--level2-accent);
+}
+.lab-level-section[data-level='3'] .lab-level-heading::before {
+    background: var(--level3-accent);
+}
+
+.lab-task-card {
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--border);
+    border-radius: var(--lab-radius);
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.lab-level-section[data-level='1'] .lab-task-card {
+    border-left-color: var(--level1-accent);
+}
+.lab-level-section[data-level='2'] .lab-task-card {
+    border-left-color: var(--level2-accent);
+}
+.lab-level-section[data-level='3'] .lab-task-card {
+    border-left-color: var(--level3-accent);
+}
+
+.lab-task-title {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin: 0 0 14px;
+}
+
+.lab-task-index {
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--text);
+    opacity: 0.7;
+}
+
+.lab-task-card p {
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.lab-task-card img {
+    max-width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: var(--lab-radius);
+    display: block;
+    margin: 0 auto 16px;
+}
+
+.lab-task-card button {
+    padding: 8px 16px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg);
+    color: var(--text-h);
+    font-size: 14px;
+    cursor: pointer;
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.lab-task-card button:hover {
+    border-color: var(--accent);
+    background: var(--accent-bg);
+}
+
+.lab-task-card button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    border-color: var(--border);
+    background: var(--bg);
+}
+
+.lab-task-card button.primary {
+    color: #fff;
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+.lab-task-card button.primary:hover {
+    filter: brightness(1.08);
+}
+
+.item-delete-btn {
+    padding: 2px 8px;
+    font-size: 12px;
+    margin-left: 8px;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+
+.lab-task-card input,
+.lab-task-card textarea,
+.lab-task-card select {
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--text-h);
+    background: var(--bg);
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.lab-task-card input:focus,
+.lab-task-card textarea:focus,
+.lab-task-card select:focus {
+    border-color: var(--accent);
+}
+
+.lab-task-card textarea {
+    width: 100%;
+    min-height: 80px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.lab-task-card label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 6px;
+    opacity: 0.8;
+}
+
+.lab-task-card input[type='checkbox'],
+.lab-task-card input[type='radio'] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--accent);
+    cursor: pointer;
+    vertical-align: middle;
+}
